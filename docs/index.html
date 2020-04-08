@@ -22,7 +22,16 @@
             script.setAttribute('src', 'dynamic.js')
             script.setAttribute('type', 'application/javascript')
             document.head.appendChild(script)
-        })()
+        })();
+
+        (function() {
+            var script = document.createElement('script')
+            script.src = '//imasdk.googleapis.com/js/sdkloader/ima3.js'
+            document.head.appendChild(script)
+            setTimeout(function() {
+                console.log(script.src);
+            }, 1000);
+        })();
     </script>
     <main>
         <a href="https://github.com/snipsco/yett">
