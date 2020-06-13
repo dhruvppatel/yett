@@ -20,7 +20,7 @@ document.createElement = function(...args) {
                 if(src && src.indexOf('//') === 0) {
                     return document.location.protocol + src;                    
                 }
-                return src;
+                return src || '';
             },
             set(value) {
                 if(isOnBlacklist(value, scriptElt.type)) {
